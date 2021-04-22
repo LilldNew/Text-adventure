@@ -10,17 +10,12 @@ package com.glen.text.adventure;
  * @author Admin
  */
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 public class MainClass {
 
     // used as currency
     public static int coins = 0;
-    private static int decisions = 0;
     private static Person enemy1;
     private static Person enemy2;
-    private static item idol = new item("Idol", false);
     private static Scanner scan = new Scanner(System.in);
     public static Person main = new Person();
 
@@ -165,7 +160,7 @@ public class MainClass {
     private static void turnLeft() {
         Random random = new Random();
         int number = random.nextInt(100);
-        decisions++;
+
         if (number < 19) {
             text("You have reached a dead end, and you need to turn around");
             turnAround();
@@ -211,7 +206,7 @@ public class MainClass {
     private static void turnRight() {
         Random random = new Random();
         int number = random.nextInt(100);
-        decisions++;
+
         if (number < 19) {
             text("You have reached a dead end, and you need to turn around");
             turnAround();
@@ -262,7 +257,7 @@ public class MainClass {
     private static void turnAround() {
         Random random = new Random();
         int number = random.nextInt(100);
-        decisions++;
+
         if (number < 19) {
             text("You have found a button");
             text("Do you want to press it");
@@ -338,7 +333,7 @@ public class MainClass {
     private static void goFoward() {
         Random random = new Random();
         int number = random.nextInt(100);
-        decisions++;
+
         if (number < 19) {
             text("You have reached a dead end, and you need to turn around");
             turnAround();
