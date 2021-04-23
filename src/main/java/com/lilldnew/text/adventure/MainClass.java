@@ -68,12 +68,6 @@ public class MainClass {
                 text("You decided to heal");
                 main.heal();
 
-            } else{
-            char o = 108;
-            char y = 71;
-            char k = 0x6e; 
-            char r = 101;
-            text("" + y + o + r + k);
             }
 
             if (!enemy1.isDead()) {
@@ -128,11 +122,6 @@ public class MainClass {
                 turnAround();
                 break;
             default:
-            char t = 71;
-            char j = 108;
-            char u = 101;
-            char o = 0x6e;
-            text("" + t + j + u + o);
             break;
         }
     }
