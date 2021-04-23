@@ -5,10 +5,10 @@
     "\\src\\main",
     "\\src\\main\\java",
     "\\src\\main\\java\\com",
-    "\\src\\main\\java\\com\\glen",
-    "\\src\\main\\java\\com\\glen\\text",
-    "\\src\\main\\java\\com\\glen\\text\\adventure"
+    "\\src\\main\\java\\com\\lilldnew",
+    "\\src\\main\\java\\com\\lilldnew\\text",
+    "\\src\\main\\java\\com\\lilldnew\\text\\adventure"
   ],
-  "SelectedNode": "\\src\\main\\java\\com\\glen\\text\\adventure\\MainClass.java",
+  "SelectedNode": "\\src\\main\\java\\com\\lilldnew\\text\\adventure\\MainClass.java",
   "PreviewInSolutionExplorer": false
 }

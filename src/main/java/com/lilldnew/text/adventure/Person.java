@@ -3,10 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.glen.text.adventure;
-
-import java.util.logging.Level;
-import java.util.logging.Logger;
+package com.lilldnew.text.adventure;
 import java.util.*;
 
 /**
@@ -16,12 +13,7 @@ import java.util.*;
  */
 
 public class Person {
-        private final static Logger LOGGER =  
-                Logger.getLogger(Logger.GLOBAL_LOGGER_NAME); 
     String name;
-    boolean isMale;
-    boolean isDating;
-    int age;
     int health;
     int damage;
     public Person (){
@@ -30,9 +22,6 @@ public class Person {
     public Person(String gname, boolean gisMale, boolean gisDating, int gage, int ghealth, int gdamage)
     {
         name=gname;
-        isMale=gisMale;
-        isDating=gisDating;
-        age=gage;
         health=ghealth;
         damage=gdamage;
     }
@@ -46,10 +35,7 @@ public class Person {
      */
     public void update(String gname, boolean gisMale, boolean gisDating, int gage, int ghealth)
     {
-        name=gname;
-        isMale=gisMale;
-      
-        age=gage;
+        name=gname;    
         health=ghealth;
     }
     
@@ -57,18 +43,9 @@ public class Person {
     public int getHealth(){
         return health;
     }
-    public void updateGender(boolean gisMale)
-    {
-        isMale=gisMale;
-        LOGGER.log(Level.INFO, "Character is a male " + isMale); 
-    }
     public void updateName(String gname){
         name=gname;
         
-    }
-    public void updateAge(int gage){
-        age=gage;
-        LOGGER.log(Level.INFO, "Name set to " + age);
     }
     public String getName(){
         return name;
