@@ -1,6 +1,5 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package com.lilldnew.text.adventure;
@@ -20,10 +19,10 @@ public class MainClass {
     public static Person main = new Person();
 
     public static void main(String[] args) {
-        text("You are an adventurer about to embark on your adventue");
+        text("You are an adventurer about to embark on your adventure");
         main.updateName("Your");
         text("You have entered a cave and can make a decision");
-        text("You can turn left, go stright, turn right or turn around");
+        text("You can turn left, go straight, turn right or turn around");
         while (true) {
             caveDecision();
         }
@@ -34,21 +33,21 @@ public class MainClass {
         int Decision;
         text("You are now in a fight with " + enemy1.getName() + ", " + enemy2.getName());
         text("You can attack, rest and sharper your weapon, or heal");
-        text("Choose wisley");
+        text("Choose wisely");
         while (true) {
             text("Enter 1 for attack, 2 for rest or 3 for heal");
             Decision = scan.nextInt();
             if (Decision == 1) {
                 int ifdecision;
-                text("Choose your emeny");
-                text("Orc\'s health is " + enemy1.getHealth() + " And mercenery\'s health is " + enemy2.getHealth());
-                text("Enter a 1 for orc or 2 for mercenery");
+                text("Choose your enemy");
+                text("Orc\'s health is " + enemy1.getHealth() + " And mercenary\'s health is " + enemy2.getHealth());
+                text("Enter a 1 for orc or 2 for mercenary");
                 ifdecision = scan.nextInt();
                 if (ifdecision == 1) {
                     if (!enemy1.isDead())
                         main.attack(enemy1);
                     else {
-                        text("The orc is dead.  You are now attacking the mercenery");
+                        text("The orc is dead.  You are now attacking the mercenary");
                         main.attack(enemy2);
                     }
 
@@ -56,7 +55,7 @@ public class MainClass {
                     if (!enemy2.isDead())
                         main.attack(enemy2);
                     else {
-                        text("The mercenery is dead.  You are now attacking the orc");
+                        text("The mercenary is dead.  You are now attacking the orc");
                         main.attack(enemy1);
                     }
                 }
@@ -106,7 +105,7 @@ public class MainClass {
 
     private static void caveDecision() {
 
-        text("Enter a 1 for left, 2 for stright, 3 for right, and 4 to turn around");
+        text("Enter a 1 for left, 2 for straight, 3 for right, and 4 to turn around");
         int Decision = scan.nextInt();
         switch (Decision) {
             case 1:
@@ -154,14 +153,14 @@ public class MainClass {
             text("You have reached a dead end, and you need to turn around");
             turnAround();
         } else if (number < 29) {
-            text("You have encountered two enemmies in your path");
+            text("You have encountered two enemies in your path");
             enemy1 = new Person("Orc", true, false, 30, 30, 20);
             enemy2 = new Person("Mercenary", true, false, 30, 30, 20);
             fight(enemy1, enemy2);
 
         } else if (number < 39) {
             text("You are running down the passage and have bumped into a pressure plate.");
-            text("The pressure plate is linked to an arrow  dispensor.");
+            text("The pressure plate is linked to an arrow  dispenser.");
             text("You lost 20 hit points");
             main.reduceHealth(20);
             if (main.isDead()) {
@@ -172,7 +171,7 @@ public class MainClass {
 
         } else if (number < 49) {
             text("You are running down the passage and have bumped into a pressure plate.");
-            text("The pressure plate is linked to an arrow  dispensor.");
+            text("The pressure plate is linked to an arrow  dispenser.");
             text("All of the arrows missed you");
 
         } else if (number < 59) {
@@ -186,7 +185,7 @@ public class MainClass {
             text("You feel your feet brush against a string");
             text("All of the doors have closed");
             text("You can hear the sound of a bomb arming");
-            text("A hydrogen bomb has detonated beneth your feet, blowing you to smithereens");
+            text("A hydrogen bomb has detonated beneath your feet, blowing you to smithereens");
             text("Re-run this program to try again");
             System.exit(0);
         }
@@ -200,14 +199,14 @@ public class MainClass {
             text("You have reached a dead end, and you need to turn around");
             turnAround();
         } else if (number < 29) {
-            text("You have encountered two enemmies in your path");
+            text("You have encountered two enemies in your path");
             enemy1 = new Person("Orc", true, false, 30, 30, 20);
             enemy2 = new Person("Mercenary", true, false, 30, 30, 20);
             fight(enemy1, enemy2);
 
         } else if (number < 39) {
             text("You are running down the passage and have bumped into a pressure plate.");
-            text("The pressure plate is linked to an arrow  dispensor.");
+            text("The pressure plate is linked to an arrow  dispenser.");
             text("You lost 20 hit points");
             main.reduceHealth(20);
             if (main.isDead()) {
@@ -238,7 +237,7 @@ public class MainClass {
             text("You feel your feet brush against a string");
             text("All of the doors have closed");
             text("You can hear the sound of a bomb arming");
-            text("A hydrogen bomb has detonated beneth your feet, blowing you to smithereens");
+            text("A hydrogen bomb has detonated beneath your feet, blowing you to smithereens");
             text("Re-run this program to try again");
             System.exit(0);
         }
@@ -259,7 +258,7 @@ public class MainClass {
 
                     text("All of the doors have closed");
                     text("You can hear the sound of a bomb arming");
-                    text("A hydrogen bomb has detonated beneth your feet, blowing you to smithereens");
+                    text("A hydrogen bomb has detonated beneath your feet, blowing you to smithereens");
                     text("Re-run this program to try again");
                     System.exit(0);
                 } else if (numnber2 == 2) {
@@ -274,20 +273,20 @@ public class MainClass {
                     main.rest();
                     main.rest();
                 } else {
-                    text("Nothning happened");
+                    text("Nothing happened");
                 }
             } else {
-
+                text("You do not press the button");
             }
         } else if (number < 29) {
-            text("You have encountered two enemmies in your path");
+            text("You have encountered two enemies in your path");
             enemy1 = new Person("Orc", true, false, 30, 30, 20);
             enemy2 = new Person("Mercenary", true, false, 30, 30, 20);
             fight(enemy1, enemy2);
 
         } else if (number < 39) {
             text("You are running down the passage and have bumped into a pressure plate.");
-            text("The pressure plate is linked to an arrow  dispensor.");
+            text("The pressure plate is linked to an arrow  dispenser.");
             text("You lost 20 hit points");
             main.reduceHealth(20);
             if (main.isDead()) {
@@ -298,7 +297,7 @@ public class MainClass {
 
         } else if (number < 49) {
             text("You are running down the passage and have bumped into a pressure plate.");
-            text("The pressure plate is linked to an arrow  dispensor.");
+            text("The pressure plate is linked to an arrow  dispenser.");
             text("All of the arrows missed you");
 
         } else if (number < 59) {
@@ -312,7 +311,7 @@ public class MainClass {
             text("You feel your feet brush against a string");
             text("All of the doors have closed");
             text("You can hear the sound of a bomb arming");
-            text("A hydrogen bomb has detonated beneth your feet, blowing you to smithereens");
+            text("A hydrogen bomb has detonated beneath your feet, blowing you to smithereens");
             text("Re-run this program to try again");
             System.exit(0);
         }
@@ -327,14 +326,14 @@ public class MainClass {
             text("You have reached a dead end, and you need to turn around");
             turnAround();
         } else if (number < 29) {
-            text("You have encountered two enemmies in your path");
+            text("You have encountered two enemies in your path");
             enemy1 = new Person("Orc", true, false, 30, 30, 20);
             enemy2 = new Person("Mercenary", true, false, 30, 30, 20);
             fight(enemy1, enemy2);
 
         } else if (number < 39) {
             text("You are running down the passage and have bumped into a pressure plate.");
-            text("The pressure plate is linked to an arrow  dispensor.");
+            text("The pressure plate is linked to an arrow  dispenser.");
             text("You lost 20 hit points");
             main.reduceHealth(20);
             if (main.isDead()) {
@@ -345,7 +344,7 @@ public class MainClass {
 
         } else if (number < 49) {
             text("You are running down the passage and have bumped into a pressure plate.");
-            text("The pressure plate is linked to an arrow  dispensor.");
+            text("The pressure plate is linked to an arrow  dispenser.");
             text("All of the arrows missed you");
 
         } else if (number < 59) {
@@ -359,7 +358,7 @@ public class MainClass {
             text("You feel your feet brush against a string");
             text("All of the doors have closed");
             text("You can hear the sound of a bomb arming");
-            text("A hydrogen bomb has detonated beneth your feet, blowing you to smithereens");
+            text("A hydrogen bomb has detonated beneath your feet, blowing you to smithereens");
             text("Re-run this program to try again");
             System.exit(0);
         }
